@@ -180,7 +180,7 @@ func Run(ctx *cli.Context) error {
 	h = r
 
 	// return version and list of services
-	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/version", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == "OPTIONS" {
 			return
 		}
